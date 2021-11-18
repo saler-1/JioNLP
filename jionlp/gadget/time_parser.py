@@ -761,6 +761,7 @@ class TimeParser(object):
     def __call__(self, time_string, time_base=time.time(), time_type=None,
                  ret_type='str', strict=False, virtual_time=False, ret_future=False):
         """ 解析时间字符串。 """
+        time_base=time.time()
         if self.future_time is None:
             self._preprocess()
 
